@@ -1,4 +1,6 @@
 import React, { useState, useCallback } from 'react';
+import PortalExample from './PortalExample';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -68,7 +70,12 @@ const App = () => {
     >
       <Router>
         <MainNavigation />
-        <main>{routes}</main>
+        <main>
+          {routes}
+          <div className="clipping-container">
+            <PortalExample />
+          </div>
+      </main>  
       </Router>
     </AuthContext.Provider>
   );
